@@ -3,6 +3,7 @@
 namespace Finite\Test\Bundle\FiniteBundle\DependencyInjection\Compiler;
 
 use Finite\Bundle\FiniteBundle\DependencyInjection\Compiler\ContainerCallbackPass;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
@@ -12,7 +13,7 @@ use Symfony\Component\DependencyInjection\Reference;
  *
  * @author Alexandre Bacco <alexandre.bacco@gmail.com>
  */
-class ContainerCallbackPassTest extends \PHPUnit_Framework_TestCase
+class ContainerCallbackPassTest extends TestCase
 {
     /**
      * @var ContainerBuilder

@@ -3,13 +3,14 @@
 namespace Finite\Test\State;
 
 use Finite\State\State;
+use PHPUnit\Framework\TestCase;
 
 /**
  *
  *
  * @author Yohan Giarelli <yohan@frequence-web.fr>
  */
-class StateTest extends \PHPUnit_Framework_TestCase
+class StateTest extends TestCase
 {
     /**
      * @var State

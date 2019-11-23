@@ -3,7 +3,7 @@
 namespace Finite\Test;
 
 use Finite\State\State;
-use  Finite\StateMachine\StateMachine;
+use Finite\StateMachine\StateMachine;
 
 /**
  * @author Yohan Giarelli <yohan@frequence-web.fr>

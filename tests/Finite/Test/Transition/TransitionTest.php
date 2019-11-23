@@ -3,12 +3,13 @@
 namespace Finite\Test\Transition;
 
 use Finite\Transition\Transition;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * @author Yohan Giarelli <yohan@giarel.li>
  */
-class TransitionTest extends \PHPUnit_Framework_TestCase
+class TransitionTest extends TestCase
 {
     /**
      * @var Transition
