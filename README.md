@@ -26,21 +26,14 @@ Getting started
 ---------------
 
 ### Installation (via composer)
-```js
-{
-      "require": {
-        "Mytskine/finite": "~1.1"
-    }
-}
+
+```
+composer require mytskine/finite
 ```
 
-### Version note :
-
-If your are using this library in a Symfony project, 1.1 version is only compatible with Symfony `>=2.6`.
-1.0 is compatible with Symfony `>=2.3, <2.6`.
-
 ### Define your Stateful Object
-Your stateful object just need to implement the `StatefulInterface` Interface.
+
+Your stateful object has to implement the `StatefulInterface` Interface.
 
 ```php
 use Finite\StatefulInterface;
@@ -48,6 +41,7 @@ use Finite\StatefulInterface;
 class Document implements StatefulInterface
 {
         private $state;
+
         public function setFiniteState($state)
         {
                 $this->state = $state;
@@ -67,8 +61,6 @@ use Finite\StateMachine\StateMachine;
 use Finite\State\State;
 use Finite\State\StateInterface;
 
-// $document = retrieve your stateful object
-
 $sm = new StateMachine();
 
 // Define states
@@ -84,14 +76,18 @@ $sm->addTransition('t34', 's3', 's4');
 $sm->addTransition('t42', 's4', 's2');
 
 // Initialize
+$document = getMyStatefulObject();
 $sm->setObject($document);
 $sm->initialize();
 
 // Retrieve current state
-$sm->getCurrentState();
+$state = $sm->getCurrentState();
 
-// Can we process a transition ?
+// Can we apply a transition?
 $sm->can('t34');
+
+// Apply a transition
+$sm->apply('t34');
 
 ```
 

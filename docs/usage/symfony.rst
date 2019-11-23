@@ -45,7 +45,7 @@ Configuration
     finite_finite:
 
         document_workflow:
-            class: MyDocument  # You class FQCN
+            class: MyDocument  # Your Fully Qualified Class Name (FQCN)
             states:
 
                 draft:    { type: initial, properties: { visible: false } }
