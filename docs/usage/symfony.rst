@@ -6,7 +6,7 @@ Installation
 
 .. code-block:: bash
 
-    $ composer require yohang/finite
+    $ composer require mytskine/finite
 
 Register the bundle
 ^^^^^^^^^^^^^^^^^^^

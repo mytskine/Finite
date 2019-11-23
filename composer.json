@@ -1,8 +1,8 @@
 {
-    "name":        "yohang/finite",
-    "description": "A simple PHP5.3+ Finite State Machine",
+    "name":        "mytskine/finite",
+    "description": "A simple PHP Finite State Machine",
     "keywords":    ["statemachine", "workflow", "state", "transition", "symfony", "bundle"],
-    "homepage":    "https://github.com/yohang/Finite",
+    "homepage":    "https://github.com/Mytskine/Finite",
     "type":        "library",
     "license":     "MIT",
     "authors": [
@@ -13,7 +13,7 @@
         },
         {
             "name":     "Finite contributors",
-            "homepage": "https://github.com/yohang/Finite/graphs/contributors"
+            "homepage": "https://github.com/Mytskine/Finite/graphs/contributors"
         }
     ],
     "require": {
