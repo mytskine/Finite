@@ -45,7 +45,7 @@ class PropertyPathStateAccessor implements StateAccessorInterface
             throw new NoSuchPropertyException(sprintf(
                 'Property path "%s" on object "%s" does not exist.',
                 $this->propertyPath,
-                get_class($object)
+                $object ? get_class($object) : "null"
             ), $e->getCode(), $e);
         }
     }
@@ -61,7 +61,7 @@ class PropertyPathStateAccessor implements StateAccessorInterface
             throw new NoSuchPropertyException(sprintf(
                 'Property path "%s" on object "%s" does not exist.',
                 $this->propertyPath,
-                get_class($object)
+                $object ? get_class($object) : "null"
             ), $e->getCode(), $e);
         }
     }
