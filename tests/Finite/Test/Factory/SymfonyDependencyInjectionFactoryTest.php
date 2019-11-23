@@ -18,7 +18,7 @@ class SymfonyDependencyInjectionFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->accessor = $this->getMock('Finite\State\Accessor\StateAccessorInterface');
+        $this->accessor = $this->createMock('Finite\State\Accessor\StateAccessorInterface');
         $container = new ContainerBuilder;
         $container
             ->register('state_machine', 'Finite\StateMachine\StateMachine')
@@ -32,14 +32,14 @@ class SymfonyDependencyInjectionFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGet()
     {
-        $object = $this->getMock('Finite\StatefulInterface');
+        $object = $this->createMock('Finite\StatefulInterface');
         $this->accessor->expects($this->at(0))->method('getState')->will($this->returnValue('s2'));
         $sm = $this->object->get($object);
 
         $this->assertInstanceOf('Finite\StateMachine\StateMachine', $sm);
         $this->assertSame('s2', $sm->getCurrentState()->getName());
 
-        $object2 = $this->getMock('Finite\StatefulInterface');
+        $object2 = $this->createMock('Finite\StatefulInterface');
         $this->accessor->expects($this->at(0))->method('getState')->will($this->returnValue('s2'));
         $sm2 = $this->object->get($object2);
 
