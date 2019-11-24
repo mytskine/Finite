@@ -1,0 +1,39 @@
+name: PHPUnit
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php:
+          # official PHP images do not exist for older versions
+          # and installing a working composer is a pain with them
+          # - php:7.3-cli
+          # - php:7.2-cli
+          # - php:7.1-cli
+          # unofficial PHP images, wither composer and php-zip
+          - phpdockerio/php73-cli:latest
+          - phpdockerio/php72-cli:latest
+          - phpdockerio/php71-cli:latest
+          - phpdockerio/php7-cli:latest
+          - phpdockerio/php56-cli:latest
+    container:
+      image: ${{ matrix.php }}
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install composer
+      run: |
+        # Docker php:* lack composer which lacks zip or git
+        # if [ -e /usr/local/bin/composer ]; then true; else php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; php composer-setup.php --quiet && rm composer-setup.php; mv composer.phar /usr/local/bin/composer; fi;
+        chmod +x /usr/local/bin/composer
+
+    - name: Install dependencies
+      run: /usr/local/bin/composer install --no-progress --no-suggest --prefer-dist
+
+    - name: Run test suite
+      run: /usr/local/bin/composer run-script test

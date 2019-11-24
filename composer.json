@@ -2,7 +2,7 @@
     "name":        "mytskine/finite",
     "description": "A simple PHP Finite State Machine",
     "keywords":    ["statemachine", "workflow", "state", "transition", "symfony", "bundle"],
-    "homepage":    "https://github.com/Mytskine/Finite",
+    "homepage":    "https://github.com/mytskine/Finite",
     "type":        "library",
     "license":     "MIT",
     "authors": [
@@ -13,7 +13,7 @@
         },
         {
             "name":     "Finite contributors",
-            "homepage": "https://github.com/Mytskine/Finite/graphs/contributors"
+            "homepage": "https://github.com/mytskine/Finite/graphs/contributors"
         }
     ],
     "require": {
@@ -48,5 +48,8 @@
         "branch-alias": {
             "dev-master": "1.1.x-dev"
         }
+    },
+	"scripts": {
+        "test": "phpunit"
     }
 }

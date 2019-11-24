@@ -99,7 +99,7 @@ Contribute
 
 Contributions are welcome !
 
-Finite follows PSR-2 code, and accept pull-requests on the `GitHub repository <https://github.com/Mytskine/Finite>`_.
+Finite follows PSR-2 code, and accept pull-requests on the `GitHub repository <https://github.com/mytskine/Finite>`_.
 
 If you're a beginner, you will find some guidelines about code contributions at `Symfony <http://symfony.com/doc/current/contributing/code/patches.html>`_.
 
