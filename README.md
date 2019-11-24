@@ -3,7 +3,6 @@ Finite, A Simple PHP Finite State Machine
 
 Finite is a Simple State Machine, written in PHP. It can manage any Stateful object by defining states and transitions between these states.
 
-[![Build Status](https://travis-ci.org/mytskine/Finite.svg?branch=master)](https://travis-ci.org/mytskine/Finite)
 [![Latest Stable Version](https://poser.pugx.org/mytskine/finite/v/stable.png)](https://packagist.org/packages/mytskine/finite)
 [![License](https://poser.pugx.org/mytskine/finite/license.png)](https://packagist.org/packages/mytskine/finite)
 
