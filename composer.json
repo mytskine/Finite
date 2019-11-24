@@ -1,5 +1,8 @@
 {
     "name":        "mytskine/finite",
+    "replace": {
+        "yohang/finite": "1.1.2"
+￼   },
     "description": "A simple PHP Finite State Machine",
     "keywords":    ["statemachine", "workflow", "state", "transition", "symfony", "bundle"],
     "homepage":    "https://github.com/mytskine/Finite",
@@ -49,7 +52,7 @@
             "dev-master": "1.1.x-dev"
         }
     },
-	"scripts": {
+    "scripts": {
         "test": "phpunit"
     }
 }
